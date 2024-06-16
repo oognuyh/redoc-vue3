@@ -1,5 +1,5 @@
 {
-  "name": "redoc-vue3",
+  "name": "@oognuyh/redoc-vue3",
   "version": "0.0.1",
   "type": "module",
   "scripts": {
@@ -15,6 +15,9 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/oognuyh/redoc-vue3.git"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "keywords": [
     "vue3",
