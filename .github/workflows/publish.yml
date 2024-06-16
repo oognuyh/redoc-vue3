@@ -14,7 +14,10 @@ jobs:
         with:
           node-version: 22.3.0
           registry-url: https://registry.npmjs.org/
+      - run: |
+          yarn config set npmAlwaysAuth true
+          yarn config set npmAuthToken $PUBLISH_NPM_TOKEN
+        env:
+          PUBLISH_NPM_TOKEN: ${{ secrets.PUBLISH_NPM_TOKEN }}
       - run: yarn
       - run: yarn npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.PUBLISH_NPM_TOKEN }}
